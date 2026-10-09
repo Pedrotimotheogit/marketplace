@@ -1,0 +1,18 @@
+services:
+  mysql:
+    image: marketplace-mysql:9.6
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_DATABASE: registration
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: app
+      MYSQL_PASSWORD: app
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
