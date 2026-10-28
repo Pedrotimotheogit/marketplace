@@ -4,9 +4,6 @@ import market.marketplace.registration.domain.Customer;
 import market.marketplace.registration.domain.CustomerId;
 import market.marketplace.registration.domain.CustomerRepository;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.StreamSupport;
